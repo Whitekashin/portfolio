@@ -47,7 +47,7 @@ export const Work = [
     id: 5,
     name: "Bankist Landing Page",
     description:
-      "One of my first landing pages, created using plain old JS and CSS",
+      "One of my first landing pages, created using plain old JavaScript and CSS",
     tags: ["javascript", "css"],
 
     demo: "https://bankist-app-course-patrick.netlify.app/",
