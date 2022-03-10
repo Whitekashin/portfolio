@@ -2,6 +2,7 @@ import styled, { keyframes } from "styled-components";
 import { NavLink } from "react-router-dom";
 import { lazy, Suspense, useState } from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 //Components
 import Intro from "./Intro";
@@ -9,8 +10,8 @@ import Loading from "../subComponents/Loading";
 import { mediaQueries } from "./Themes";
 
 const Homebutton = lazy(() => import("../subComponents/Homebutton"));
+const LanguageButton = lazy(() => import("../subComponents/LanguageButton"));
 const SocialIcons = lazy(() => import("./../subComponents/SocialIcons"));
-
 const LogoComponent = lazy(() => import("./../subComponents/LogoComponent"));
 
 const MainContainer = styled.div`
@@ -116,8 +117,8 @@ const Container = styled.div`
 
 const Center = styled.button`
   position: absolute;
-  top: ${(props) => (props.click ? "90%" : "50%")};
-  left: ${(props) => (props.click ? "92%" : "50%")};
+  top: ${(props) => (props.click ? "88%" : "50%")};
+  left: ${(props) => (props.click ? "59%" : "50%")};
   transform: translate(-50%, -50%);
   border: none;
   outline: none;
@@ -233,6 +234,7 @@ width: 0;
 `;
 
 const Main = () => {
+  const { t } = useTranslation(["main"]);
   const [click, setClick] = useState(false);
   const [path, setpath] = useState("");
 
@@ -257,6 +259,7 @@ const Main = () => {
       >
         <DarkDiv click={click} />
         <Container>
+          {/* <LanguageButton theme={click ? "light" : "dark"} /> */}
           <LogoComponent theme={click ? "light" : "dark"} />
           <Homebutton />
 
@@ -278,7 +281,7 @@ const Main = () => {
               </span>
             </GlitchText>
 
-            <span>click here</span>
+            <span>{t("span")}</span>
           </Center>
 
           {/* // MEDIA QUERY  CONTACT // */}
@@ -300,7 +303,7 @@ const Main = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
-                {"<Contact>"}
+                {t("Contact")}
               </motion.h2>
             </Contact>
           ) : (
@@ -321,7 +324,7 @@ const Main = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
-                {"<Contact>"}
+                {t("Contact")}
               </motion.h2>
             </Contact>
           )}
@@ -342,7 +345,7 @@ const Main = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              {"<Work>"}
+              {t("Work")}
             </motion.h2>
           </WORK>
 
@@ -365,7 +368,7 @@ const Main = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
-                {"<About>"}
+                {t("About")}
               </motion.h2>
             </ABOUT>
             <SKILLS to="/skills">
@@ -382,7 +385,7 @@ const Main = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
-                {"<Skills>"}
+                {t("Skills")}
               </motion.h2>
             </SKILLS>
           </BottomBar>

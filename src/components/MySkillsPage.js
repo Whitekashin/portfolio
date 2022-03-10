@@ -5,6 +5,7 @@ import { DarkTheme, mediaQueries } from "./Themes";
 
 import { Design, Develope } from "./AllSvgs";
 import Loading from "../subComponents/Loading";
+import { useTranslation } from "react-i18next";
 
 //Components
 const SocialIcons = lazy(() => import("../subComponents/SocialIcons"));
@@ -150,6 +151,7 @@ const Description = styled.div`
 `;
 
 const MySkillsPage = () => {
+  const { t } = useTranslation(["skills"]);
   return (
     <ThemeProvider theme={DarkTheme}>
       <Suspense fallback={<Loading />}>
@@ -166,51 +168,45 @@ const MySkillsPage = () => {
 
           <Main>
             <Title>
-              <Design width={40} height={40} /> Designer
+              <Design width={40} height={40} /> {t("titledes")}
             </Title>
+            <Description>{t("descdesign")}</Description>
             <Description>
-              I love giving ideas form and color. Keeping designs clean, minimal
-              and simple.
-            </Description>
-            <Description>
-              <strong>I like to design</strong>
+              <strong>{t("Titledesign")}</strong>
               <ul>
-                <li>Web Design</li>
-                <li>Mobile Apps</li>
+                <li>{t("webdesign")}</li>
+                <li>{t("mobileapps")} </li>
               </ul>
             </Description>
             <Description>
-              <strong>Tools</strong>
+              <strong>{t("Titletools")}</strong>
               <ul>
-                <li>Figma</li>
-                <li>Photoshop</li>
+                <li>{t("figma")}</li>
+                <li>{t("ps")}</li>
               </ul>
             </Description>
           </Main>
           <Main>
             <Title>
-              <Develope width={40} height={40} /> Frontend Developer
+              <Develope width={40} height={40} /> {t("titledev")}
             </Title>
+            <Description>{t("descdev")}</Description>
             <Description>
-              I'm keenly interested in becoming a Full-Stack Developer. I enjoy
-              programming and especially learning new things, through which I
-              can bring ideas to life.
-            </Description>
-            <Description>
-              <strong>Skills</strong>
+              <strong>{t("Skills")}</strong>
               <ul>
-                <li>HTML, CSS, JS, React</li>
-                <li>PostgreSQL, Bootstrap, Node.js</li>
+                <li>{t("firstrow")}</li>
+                <li>{t("secondrow")}</li>
               </ul>
             </Description>
             <Description>
-              <strong>Tools</strong>
+              <strong>{t("Toolsdev")}</strong>
               <ul>
-                <li>VScode, Github</li>
+                <li>{t("thirdrow")}</li>
+                <li>{t("fourthrow")}</li>
               </ul>
             </Description>
           </Main>
-          <BigTitle text="SKILLS" top="80%" right="10%" />
+          <BigTitle text={t("BIGTITLE")} top="85%" right="10%" />
         </Box>
       </Suspense>
     </ThemeProvider>

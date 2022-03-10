@@ -86,7 +86,7 @@ const SoundBar = () => {
       <Line click={click} />
       <Line click={click} />
 
-      <audio volume src={music} ref={ref} loop />
+      <audio volume="0.02" src={music} ref={ref} loop />
     </Box>
   );
 };

@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { Github } from "../components/AllSvgs";
 import { mediaQueries } from "../components/Themes";
+import { useTranslation } from "react-i18next";
 
 const Box = styled(motion.li)`
   width: 16rem;
@@ -139,6 +140,7 @@ const item = {
 };
 
 const Card = (props) => {
+  const { t } = useTranslation(["work"]);
   const { id, name, description, tags, demo, github } = props.data;
   return (
     <Box key={id} variants={item}>
@@ -151,7 +153,7 @@ const Card = (props) => {
       </Tags>
       <Footer>
         <Link to={{ pathname: `${demo}` }} target="_blank">
-          Visit
+          {t("Visit")}
         </Link>
         <Git to={{ pathname: `${github}` }} target="_blank">
           <Github width={30} height={30} />

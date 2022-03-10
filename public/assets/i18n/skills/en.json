@@ -1,0 +1,21 @@
+{
+  "titledes": "Designer",
+  "descdesign": "I love giving ideas form and color. Keeping designs clean, minimal and simple.",
+  "Titledesign": "I like to design",
+  "webdesign": "Websites",
+  "mobileapps": "Mobile Apps",
+  "Titletools": "Tools",
+  "figma": "Figma",
+  "ps": "Photoshop",
+
+  "titledev": "Frontend Developer",
+  "descdev": "I'm keenly interested in becoming a Full-Stack Developer. I enjoy programming and especially learning new things, through which I can bring ideas to life.",
+  "Skills": "Skills",
+  "firstrow": "HTML, CSS, JS, React",
+  "secondrow": "Bootstrap, Node.js",
+  "Toolsdev": "Tools",
+  "thirdrow": "Github",
+  "fourthrow": "VSCode",
+
+  "BIGTITLE": "Skills"
+}

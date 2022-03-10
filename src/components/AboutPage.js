@@ -5,6 +5,7 @@ import styled, { keyframes, ThemeProvider } from "styled-components";
 import { DarkTheme, mediaQueries } from "./Themes";
 import ghost from "../assets/Images/ghost_sheet.png";
 import Loading from "../subComponents/Loading";
+import { useTranslation } from "react-i18next";
 
 //Components
 const SocialIcons = lazy(() => import("../subComponents/SocialIcons"));
@@ -104,6 +105,7 @@ const Main = styled(motion.div)`
 `;
 
 const AboutPage = () => {
+  const { t } = useTranslation(["about"]);
   return (
     <ThemeProvider theme={DarkTheme}>
       <Suspense fallback={<Loading />}>
@@ -130,16 +132,13 @@ const AboutPage = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { duration: 1, delay: 1 } }}
           >
-            I'm a front-end developer located in Germany. I fell in love with
-            programming, shortly after the pandemic started and now I want to go
-            above and beyond in learning to become a fully fledged full-stack
-            developer. <br></br> I'm a big nerd in general and worked in the
-            general IT field for quite some time prior. I also love reading
-            books, playing video games and DIY. You may connect with me via the
-            social links!
+            {t("desc1")}
+            <br></br>
+            <br></br>
+            {t("desc2")}
           </Main>
 
-          <BigTitle text="ABOUT" top="10%" left="5%" />
+          <BigTitle text={t("BIGTITLE")} top="80%" left="15%" />
         </Box>
       </Suspense>
     </ThemeProvider>

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import Me from "../assets/Images/profile-img.png";
 import { mediaQueries } from "./Themes";
+import { useTranslation } from "react-i18next";
 
 const Box = styled(motion.div)`
   width: 55vw;
@@ -57,7 +58,8 @@ const Box = styled(motion.div)`
   `};
 
   ${mediaQueries(30)`
-    width: 70vw;
+    width: 60vw;
+  
     
   
   `};
@@ -103,7 +105,7 @@ const SubBox = styled.div`
 height: 50%;
   .pic {
 
-width: 70%;
+width: 80%;
 
 }
 
@@ -124,7 +126,7 @@ width: 80%;
 
   .pic {
 
-width: 80%;
+width: 72%;
 
 }
 
@@ -164,7 +166,8 @@ const Text = styled(motion.div)`
   }
 
   ${mediaQueries(40)`
-        font-size: calc(1rem + 1.5vw);
+        font-size: calc(1rem + 2vw);
+
 
 
   `};
@@ -177,14 +180,18 @@ const Text = styled(motion.div)`
 `;
 
 const Intro = () => {
+  const { t } = useTranslation(["main"]);
   const [height, setHeight] = useState("55vh");
 
   useEffect(() => {
     if (window.matchMedia("(max-width: 50em)").matches) {
-      setHeight("70vh");
+      setHeight("80vh");
+    }
+    if (window.matchMedia("(max-width: 30em)").matches) {
+      setHeight("60vh");
     }
     if (window.matchMedia("(max-width: 20em)").matches) {
-      setHeight("60vh");
+      setHeight("50vh");
     }
   }, []);
 
@@ -196,12 +203,9 @@ const Intro = () => {
     >
       <SubBox>
         <Text>
-          <h1>Hi,</h1>
-          <h3>I'm Patrick</h3>
-          <h6>
-            I'm a self-taught developer from Austria and this is my personal
-            portfolio!
-          </h6>
+          <h1>{t("greeting")}</h1>
+          <h2>{t("name")}</h2>
+          <h3>{t("description")}</h3>
         </Text>
       </SubBox>
       <SubBox>

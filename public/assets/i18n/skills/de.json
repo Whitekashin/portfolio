@@ -1,0 +1,21 @@
+{
+  "titledes": "Designer",
+  "descdesign": "Ich liebe es Ideen Form und Farbe zu geben. Dabei versuche ich die Design sauber, einfach und minimal zu halten.",
+  "Titledesign": "Ich designe gern",
+  "webdesign": "Websites",
+  "mobileapps": "Mobile Apps",
+  "Titletools": "Werkzeuge",
+  "figma": "Figma",
+  "ps": "Photoshop",
+
+  "titledev": "Entwickler",
+  "descdev": "Ich lerne unheimlich gerne neue Dinge, durch die ich meinen Ideen Leben einhauchen kann",
+  "Skills": "Skills",
+  "firstrow": "HTML, CSS, JS, React",
+  "secondrow": "Bootstrap, Node.js",
+  "Toolsdev": "Werkzeuge",
+  "thirdrow": "Github",
+  "fourthrow": "VSCode",
+
+  "BIGTITLE": "Skills"
+}

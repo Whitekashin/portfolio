@@ -1,4 +1,4 @@
-export const Work = [
+/* export const Work = [
   {
     id: 1,
     name: "Webshop",
@@ -64,3 +64,4 @@ export const Work = [
     github: "https://github.com/Whitekashin/Forkify-Course",
   },
 ];
+ */
