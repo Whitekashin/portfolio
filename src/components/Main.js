@@ -10,7 +10,7 @@ import Loading from "../subComponents/Loading";
 import { mediaQueries } from "./Themes";
 
 const Homebutton = lazy(() => import("../subComponents/Homebutton"));
-const LanguageButton = lazy(() => import("../subComponents/LanguageButton"));
+/* const LanguageButton = lazy(() => import("../subComponents/LanguageButton")); */
 const SocialIcons = lazy(() => import("./../subComponents/SocialIcons"));
 const LogoComponent = lazy(() => import("./../subComponents/LogoComponent"));
 
