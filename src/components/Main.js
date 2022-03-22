@@ -10,7 +10,6 @@ import Loading from "../subComponents/Loading";
 import { mediaQueries } from "./Themes";
 
 const Homebutton = lazy(() => import("../subComponents/Homebutton"));
-/* const LanguageButton = lazy(() => import("../subComponents/LanguageButton")); */
 const SocialIcons = lazy(() => import("./../subComponents/SocialIcons"));
 const LogoComponent = lazy(() => import("./../subComponents/LogoComponent"));
 
@@ -259,7 +258,6 @@ const Main = () => {
       >
         <DarkDiv click={click} />
         <Container>
-          {/* <LanguageButton theme={click ? "light" : "dark"} /> */}
           <LogoComponent theme={click ? "light" : "dark"} />
           <Homebutton />
 
