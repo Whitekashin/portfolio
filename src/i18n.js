@@ -27,6 +27,9 @@ i18n
       // translation file path
       loadPath: "/assets/i18n/{{ns}}/{{lng}}.json",
     },
+    react: {
+      useSuspense: false, //   <---- this will do the magic
+    },
     debug: false,
   });
 

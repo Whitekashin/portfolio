@@ -117,7 +117,7 @@ const Container = styled.div`
 const Center = styled.button`
   position: absolute;
   top: ${(props) => (props.click ? "88%" : "50%")};
-  left: ${(props) => (props.click ? "59%" : "50%")};
+  left: ${(props) => (props.click ? "67%" : "50%")};
   transform: translate(-50%, -50%);
   border: none;
   outline: none;
@@ -139,7 +139,7 @@ const Center = styled.button`
     @media only screen and (max-width: 50em) {
       font-size: ${(props) => (props.click ? "1rem" : "3rem")};
       top: ${(props) => (props.click ? "-50%" : "0%")};
-      left: ${(props) => (props.click ? "-30%" : "0%")};
+      left: ${(props) => (props.click ? "-60%" : "0%")};
     }
   }
 
